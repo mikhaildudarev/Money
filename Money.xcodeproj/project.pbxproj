@@ -11,7 +11,21 @@
 		FA6B9A6128CD1A02002D13DA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B9A6028CD1A02002D13DA /* ContentView.swift */; };
 		FA6B9A6328CD1A03002D13DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA6B9A6228CD1A03002D13DA /* Assets.xcassets */; };
 		FA6B9A6628CD1A03002D13DA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA6B9A6528CD1A03002D13DA /* Preview Assets.xcassets */; };
+		FA727F0A28D0F07400753C57 /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA727F0828D0F07400753C57 /* CoreDataModel.xcdatamodeld */; };
+		FA727F0C28D1076100753C57 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA727F0B28D1076100753C57 /* CoreDataStack.swift */; };
+		FA727F1728D261DA00753C57 /* MoneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA727F1628D261DA00753C57 /* MoneyTests.swift */; };
+		FA727F1E28D261FF00753C57 /* CoreDataStackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA727F1D28D261FF00753C57 /* CoreDataStackTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FA727F1828D261DA00753C57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA6B9A5328CD1A02002D13DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA6B9A5A28CD1A02002D13DA;
+			remoteInfo = Money;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		FA6B9A5B28CD1A02002D13DA /* Money.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Money.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,10 +33,22 @@
 		FA6B9A6028CD1A02002D13DA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FA6B9A6228CD1A03002D13DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA6B9A6528CD1A03002D13DA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FA727F0928D0F07400753C57 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		FA727F0B28D1076100753C57 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		FA727F1428D261DA00753C57 /* MoneyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoneyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA727F1628D261DA00753C57 /* MoneyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyTests.swift; sourceTree = "<group>"; };
+		FA727F1D28D261FF00753C57 /* CoreDataStackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStackTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		FA6B9A5828CD1A02002D13DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA727F1128D261DA00753C57 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				FA6B9A5D28CD1A02002D13DA /* Money */,
+				FA727F1528D261DA00753C57 /* MoneyTests */,
 				FA6B9A5C28CD1A02002D13DA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				FA6B9A5B28CD1A02002D13DA /* Money.app */,
+				FA727F1428D261DA00753C57 /* MoneyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -53,6 +81,7 @@
 			children = (
 				FA6B9A5E28CD1A02002D13DA /* MoneyApp.swift */,
 				FA6B9A6028CD1A02002D13DA /* ContentView.swift */,
+				FA727F0728D0F03900753C57 /* Persistence */,
 				FA6B9A6228CD1A03002D13DA /* Assets.xcassets */,
 				FA6B9A6428CD1A03002D13DA /* Preview Content */,
 			);
@@ -65,6 +94,32 @@
 				FA6B9A6528CD1A03002D13DA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FA727F0728D0F03900753C57 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				FA727F0828D0F07400753C57 /* CoreDataModel.xcdatamodeld */,
+				FA727F0B28D1076100753C57 /* CoreDataStack.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		FA727F1528D261DA00753C57 /* MoneyTests */ = {
+			isa = PBXGroup;
+			children = (
+				FA727F1628D261DA00753C57 /* MoneyTests.swift */,
+				FA727F1F28D2679200753C57 /* Persistence */,
+			);
+			path = MoneyTests;
+			sourceTree = "<group>";
+		};
+		FA727F1F28D2679200753C57 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				FA727F1D28D261FF00753C57 /* CoreDataStackTests.swift */,
+			);
+			path = Persistence;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +142,24 @@
 			productReference = FA6B9A5B28CD1A02002D13DA /* Money.app */;
 			productType = "com.apple.product-type.application";
 		};
+		FA727F1328D261DA00753C57 /* MoneyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA727F1A28D261DA00753C57 /* Build configuration list for PBXNativeTarget "MoneyTests" */;
+			buildPhases = (
+				FA727F1028D261DA00753C57 /* Sources */,
+				FA727F1128D261DA00753C57 /* Frameworks */,
+				FA727F1228D261DA00753C57 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA727F1928D261DA00753C57 /* PBXTargetDependency */,
+			);
+			name = MoneyTests;
+			productName = MoneyTests;
+			productReference = FA727F1428D261DA00753C57 /* MoneyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -99,6 +172,10 @@
 				TargetAttributes = {
 					FA6B9A5A28CD1A02002D13DA = {
 						CreatedOnToolsVersion = 14.0;
+					};
+					FA727F1328D261DA00753C57 = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = FA6B9A5A28CD1A02002D13DA;
 					};
 				};
 			};
@@ -116,6 +193,7 @@
 			projectRoot = "";
 			targets = (
 				FA6B9A5A28CD1A02002D13DA /* Money */,
+				FA727F1328D261DA00753C57 /* MoneyTests */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +208,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FA727F1228D261DA00753C57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -139,10 +224,29 @@
 			files = (
 				FA6B9A6128CD1A02002D13DA /* ContentView.swift in Sources */,
 				FA6B9A5F28CD1A02002D13DA /* MoneyApp.swift in Sources */,
+				FA727F0C28D1076100753C57 /* CoreDataStack.swift in Sources */,
+				FA727F0A28D0F07400753C57 /* CoreDataModel.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA727F1028D261DA00753C57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA727F1728D261DA00753C57 /* MoneyTests.swift in Sources */,
+				FA727F1E28D261FF00753C57 /* CoreDataStackTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FA727F1928D261DA00753C57 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA6B9A5A28CD1A02002D13DA /* Money */;
+			targetProxy = FA727F1828D261DA00753C57 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		FA6B9A6728CD1A03002D13DA /* Debug */ = {
@@ -317,6 +421,42 @@
 			};
 			name = Release;
 		};
+		FA727F1B28D261DA00753C57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X7GLF7Z6BV;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mikhaildudarev.MoneyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Money.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Money";
+			};
+			name = Debug;
+		};
+		FA727F1C28D261DA00753C57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X7GLF7Z6BV;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mikhaildudarev.MoneyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Money.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Money";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -338,7 +478,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		FA727F1A28D261DA00753C57 /* Build configuration list for PBXNativeTarget "MoneyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA727F1B28D261DA00753C57 /* Debug */,
+				FA727F1C28D261DA00753C57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FA727F0828D0F07400753C57 /* CoreDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FA727F0928D0F07400753C57 /* Model.xcdatamodel */,
+			);
+			currentVersion = FA727F0928D0F07400753C57 /* Model.xcdatamodel */;
+			path = CoreDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FA6B9A5328CD1A02002D13DA /* Project object */;
 }
