@@ -11,7 +11,7 @@ import SwiftUI
 struct MoneyApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView(store: RootStore.live)
         }
     }
 }
