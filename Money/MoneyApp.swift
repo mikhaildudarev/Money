@@ -5,13 +5,14 @@
 //  Created by Mikhail Dudarev on 10.09.2022.
 //
 
+import RootFeature
 import SwiftUI
 
 @main
 struct MoneyApp: App {
     var body: some Scene {
         WindowGroup {
-            RootView(store: RootStore.live)
+            RootFeature.View(store: RootFeature.Store.live)
         }
     }
 }

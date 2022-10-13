@@ -7,21 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA49F10B28F842BA006F3078 /* RootFeature in Resources */ = {isa = PBXBuildFile; fileRef = FA49F10A28F842BA006F3078 /* RootFeature */; };
+		FA49F10E28F843EC006F3078 /* AccountsFeature in Resources */ = {isa = PBXBuildFile; fileRef = FA49F10D28F843EC006F3078 /* AccountsFeature */; };
+		FA49F11028F844CB006F3078 /* NewAccountFeature in Resources */ = {isa = PBXBuildFile; fileRef = FA49F10F28F844CB006F3078 /* NewAccountFeature */; };
+		FA49F11228F84557006F3078 /* TransactionsFeature in Resources */ = {isa = PBXBuildFile; fileRef = FA49F11128F84557006F3078 /* TransactionsFeature */; };
+		FA49F11628F845BF006F3078 /* NewAccountFeature in Frameworks */ = {isa = PBXBuildFile; productRef = FA49F11528F845BF006F3078 /* NewAccountFeature */; };
+		FA49F11828F845BF006F3078 /* RootFeature in Frameworks */ = {isa = PBXBuildFile; productRef = FA49F11728F845BF006F3078 /* RootFeature */; };
+		FA49F11A28F845BF006F3078 /* TransactionsFeature in Frameworks */ = {isa = PBXBuildFile; productRef = FA49F11928F845BF006F3078 /* TransactionsFeature */; };
+		FA49F11D28F846E6006F3078 /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = FA49F11C28F846E6006F3078 /* Models */; };
+		FA49F11F28F8476D006F3078 /* AccountsFeature in Frameworks */ = {isa = PBXBuildFile; productRef = FA49F11E28F8476D006F3078 /* AccountsFeature */; };
 		FA6B9A5F28CD1A02002D13DA /* MoneyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B9A5E28CD1A02002D13DA /* MoneyApp.swift */; };
-		FA6B9A6128CD1A02002D13DA /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B9A6028CD1A02002D13DA /* RootView.swift */; };
 		FA6B9A6328CD1A03002D13DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA6B9A6228CD1A03002D13DA /* Assets.xcassets */; };
 		FA6B9A6628CD1A03002D13DA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA6B9A6528CD1A03002D13DA /* Preview Assets.xcassets */; };
 		FA727F0A28D0F07400753C57 /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA727F0828D0F07400753C57 /* CoreDataModel.xcdatamodeld */; };
 		FA727F0C28D1076100753C57 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA727F0B28D1076100753C57 /* CoreDataStack.swift */; };
 		FA727F1728D261DA00753C57 /* MoneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA727F1628D261DA00753C57 /* MoneyTests.swift */; };
 		FA727F1E28D261FF00753C57 /* CoreDataStackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA727F1D28D261FF00753C57 /* CoreDataStackTests.swift */; };
-		FA727F2228D26CD300753C57 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = FA727F2128D26CD300753C57 /* ComposableArchitecture */; };
-		FACBC43328ED6E7500242B11 /* RootCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACBC43228ED6E7500242B11 /* RootCore.swift */; };
-		FACBC43628ED700600242B11 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACBC43528ED700600242B11 /* Account.swift */; };
-		FAECA2A228EDB5B5001F40F8 /* AccountsCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAECA2A128EDB5B5001F40F8 /* AccountsCore.swift */; };
-		FAECA2A428EDB7D1001F40F8 /* AccountsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAECA2A328EDB7D1001F40F8 /* AccountsView.swift */; };
-		FAECA2A728EE0590001F40F8 /* TransactionsCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAECA2A628EE0590001F40F8 /* TransactionsCore.swift */; };
-		FAECA2A928EE06B4001F40F8 /* TransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAECA2A828EE06B4001F40F8 /* TransactionsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +36,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA49F10A28F842BA006F3078 /* RootFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RootFeature; sourceTree = "<group>"; };
+		FA49F10D28F843EC006F3078 /* AccountsFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = AccountsFeature; sourceTree = "<group>"; };
+		FA49F10F28F844CB006F3078 /* NewAccountFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = NewAccountFeature; sourceTree = "<group>"; };
+		FA49F11128F84557006F3078 /* TransactionsFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = TransactionsFeature; sourceTree = "<group>"; };
+		FA49F11B28F846AC006F3078 /* Models */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Models; sourceTree = "<group>"; };
 		FA6B9A5B28CD1A02002D13DA /* Money.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Money.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA6B9A5E28CD1A02002D13DA /* MoneyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyApp.swift; sourceTree = "<group>"; };
-		FA6B9A6028CD1A02002D13DA /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		FA6B9A6228CD1A03002D13DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA6B9A6528CD1A03002D13DA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FA727F0928D0F07400753C57 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -45,12 +50,6 @@
 		FA727F1428D261DA00753C57 /* MoneyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoneyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA727F1628D261DA00753C57 /* MoneyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyTests.swift; sourceTree = "<group>"; };
 		FA727F1D28D261FF00753C57 /* CoreDataStackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStackTests.swift; sourceTree = "<group>"; };
-		FACBC43228ED6E7500242B11 /* RootCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCore.swift; sourceTree = "<group>"; };
-		FACBC43528ED700600242B11 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
-		FAECA2A128EDB5B5001F40F8 /* AccountsCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsCore.swift; sourceTree = "<group>"; };
-		FAECA2A328EDB7D1001F40F8 /* AccountsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsView.swift; sourceTree = "<group>"; };
-		FAECA2A628EE0590001F40F8 /* TransactionsCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsCore.swift; sourceTree = "<group>"; };
-		FAECA2A828EE06B4001F40F8 /* TransactionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +57,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA727F2228D26CD300753C57 /* ComposableArchitecture in Frameworks */,
+				FA49F11D28F846E6006F3078 /* Models in Frameworks */,
+				FA49F11A28F845BF006F3078 /* TransactionsFeature in Frameworks */,
+				FA49F11628F845BF006F3078 /* NewAccountFeature in Frameworks */,
+				FA49F11F28F8476D006F3078 /* AccountsFeature in Frameworks */,
+				FA49F11828F845BF006F3078 /* RootFeature in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +81,7 @@
 				FA6B9A5D28CD1A02002D13DA /* Money */,
 				FA727F1528D261DA00753C57 /* MoneyTests */,
 				FA6B9A5C28CD1A02002D13DA /* Products */,
+				FAB0303628F7628C00E77C0D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,10 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				FA6B9A5E28CD1A02002D13DA /* MoneyApp.swift */,
-				FACBC43228ED6E7500242B11 /* RootCore.swift */,
-				FA6B9A6028CD1A02002D13DA /* RootView.swift */,
+				FA49F11B28F846AC006F3078 /* Models */,
 				FAECA29F28EDB565001F40F8 /* Features */,
-				FACBC43428ED6FEE00242B11 /* Models */,
 				FA727F0728D0F03900753C57 /* Persistence */,
 				FA6B9A6228CD1A03002D13DA /* Assets.xcassets */,
 				FA6B9A6428CD1A03002D13DA /* Preview Content */,
@@ -139,39 +141,22 @@
 			path = Persistence;
 			sourceTree = "<group>";
 		};
-		FACBC43428ED6FEE00242B11 /* Models */ = {
+		FAB0303628F7628C00E77C0D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FACBC43528ED700600242B11 /* Account.swift */,
 			);
-			path = Models;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		FAECA29F28EDB565001F40F8 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				FAECA2A028EDB584001F40F8 /* Accounts */,
-				FAECA2A528EE039C001F40F8 /* Transactions */,
+				FA49F10A28F842BA006F3078 /* RootFeature */,
+				FA49F10D28F843EC006F3078 /* AccountsFeature */,
+				FA49F10F28F844CB006F3078 /* NewAccountFeature */,
+				FA49F11128F84557006F3078 /* TransactionsFeature */,
 			);
 			path = Features;
-			sourceTree = "<group>";
-		};
-		FAECA2A028EDB584001F40F8 /* Accounts */ = {
-			isa = PBXGroup;
-			children = (
-				FAECA2A128EDB5B5001F40F8 /* AccountsCore.swift */,
-				FAECA2A328EDB7D1001F40F8 /* AccountsView.swift */,
-			);
-			path = Accounts;
-			sourceTree = "<group>";
-		};
-		FAECA2A528EE039C001F40F8 /* Transactions */ = {
-			isa = PBXGroup;
-			children = (
-				FAECA2A628EE0590001F40F8 /* TransactionsCore.swift */,
-				FAECA2A828EE06B4001F40F8 /* TransactionsView.swift */,
-			);
-			path = Transactions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,7 +176,11 @@
 			);
 			name = Money;
 			packageProductDependencies = (
-				FA727F2128D26CD300753C57 /* ComposableArchitecture */,
+				FA49F11528F845BF006F3078 /* NewAccountFeature */,
+				FA49F11728F845BF006F3078 /* RootFeature */,
+				FA49F11928F845BF006F3078 /* TransactionsFeature */,
+				FA49F11C28F846E6006F3078 /* Models */,
+				FA49F11E28F8476D006F3078 /* AccountsFeature */,
 			);
 			productName = Money;
 			productReference = FA6B9A5B28CD1A02002D13DA /* Money.app */;
@@ -244,7 +233,6 @@
 			);
 			mainGroup = FA6B9A5228CD1A02002D13DA;
 			packageReferences = (
-				FA727F2028D26CD300753C57 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 			);
 			productRefGroup = FA6B9A5C28CD1A02002D13DA /* Products */;
 			projectDirPath = "";
@@ -262,7 +250,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA6B9A6628CD1A03002D13DA /* Preview Assets.xcassets in Resources */,
+				FA49F11028F844CB006F3078 /* NewAccountFeature in Resources */,
 				FA6B9A6328CD1A03002D13DA /* Assets.xcassets in Resources */,
+				FA49F10B28F842BA006F3078 /* RootFeature in Resources */,
+				FA49F11228F84557006F3078 /* TransactionsFeature in Resources */,
+				FA49F10E28F843EC006F3078 /* AccountsFeature in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,16 +272,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAECA2A428EDB7D1001F40F8 /* AccountsView.swift in Sources */,
-				FA6B9A6128CD1A02002D13DA /* RootView.swift in Sources */,
 				FA6B9A5F28CD1A02002D13DA /* MoneyApp.swift in Sources */,
-				FAECA2A228EDB5B5001F40F8 /* AccountsCore.swift in Sources */,
 				FA727F0C28D1076100753C57 /* CoreDataStack.swift in Sources */,
-				FAECA2A928EE06B4001F40F8 /* TransactionsView.swift in Sources */,
 				FA727F0A28D0F07400753C57 /* CoreDataModel.xcdatamodeld in Sources */,
-				FACBC43328ED6E7500242B11 /* RootCore.swift in Sources */,
-				FACBC43628ED700600242B11 /* Account.swift in Sources */,
-				FAECA2A728EE0590001F40F8 /* TransactionsCore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +417,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Money/Preview Content\"";
@@ -450,6 +436,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mikhaildudarev.Money;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -461,6 +448,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Money/Preview Content\"";
@@ -479,6 +467,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mikhaildudarev.Money;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -553,22 +542,26 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		FA727F2028D26CD300753C57 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.9.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
 /* Begin XCSwiftPackageProductDependency section */
-		FA727F2128D26CD300753C57 /* ComposableArchitecture */ = {
+		FA49F11528F845BF006F3078 /* NewAccountFeature */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FA727F2028D26CD300753C57 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
-			productName = ComposableArchitecture;
+			productName = NewAccountFeature;
+		};
+		FA49F11728F845BF006F3078 /* RootFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RootFeature;
+		};
+		FA49F11928F845BF006F3078 /* TransactionsFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TransactionsFeature;
+		};
+		FA49F11C28F846E6006F3078 /* Models */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Models;
+		};
+		FA49F11E28F8476D006F3078 /* AccountsFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AccountsFeature;
 		};
 /* End XCSwiftPackageProductDependency section */
 
