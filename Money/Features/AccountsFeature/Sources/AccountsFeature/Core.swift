@@ -66,14 +66,16 @@ private let accountsReducer = Reducer { state, action, env in
     case .newAccountSheetAction(let newAccountAction):
         switch newAccountAction {
         case .closeButtonTapped:
-            state.newAccount = nil
-            return .none
+            return .task {
+                return .dismissNewAccountSheet
+            }
         case .saveButtonTapped:
             if let account = state.newAccount?.account {
                 state.accounts.append(account)
             }
-            state.newAccount = nil
-            return .none
+            return .task {
+                return .dismissNewAccountSheet
+            }
         case .accountBalanceDidChange, .accountNameDidChange:
             return .none
         }
