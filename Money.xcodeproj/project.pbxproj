@@ -23,6 +23,7 @@
 		FA727F0C28D1076100753C57 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA727F0B28D1076100753C57 /* CoreDataStack.swift */; };
 		FA727F1728D261DA00753C57 /* MoneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA727F1628D261DA00753C57 /* MoneyTests.swift */; };
 		FA727F1E28D261FF00753C57 /* CoreDataStackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA727F1D28D261FF00753C57 /* CoreDataStackTests.swift */; };
+		FABB5F1429001BFE00EF27F6 /* Helpers in Frameworks */ = {isa = PBXBuildFile; productRef = FABB5F1329001BFE00EF27F6 /* Helpers */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA38BFE9290019E400E4CD98 /* Helpers */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Helpers; sourceTree = "<group>"; };
 		FA49F10A28F842BA006F3078 /* RootFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RootFeature; sourceTree = "<group>"; };
 		FA49F10D28F843EC006F3078 /* AccountsFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = AccountsFeature; sourceTree = "<group>"; };
 		FA49F10F28F844CB006F3078 /* NewAccountFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = NewAccountFeature; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FABB5F1429001BFE00EF27F6 /* Helpers in Frameworks */,
 				FA49F11D28F846E6006F3078 /* Models in Frameworks */,
 				FA49F11A28F845BF006F3078 /* TransactionsFeature in Frameworks */,
 				FA49F11628F845BF006F3078 /* NewAccountFeature in Frameworks */,
@@ -97,6 +100,7 @@
 		FA6B9A5D28CD1A02002D13DA /* Money */ = {
 			isa = PBXGroup;
 			children = (
+				FA38BFE9290019E400E4CD98 /* Helpers */,
 				FA6B9A5E28CD1A02002D13DA /* MoneyApp.swift */,
 				FA49F11B28F846AC006F3078 /* Models */,
 				FAECA29F28EDB565001F40F8 /* Features */,
@@ -181,6 +185,7 @@
 				FA49F11928F845BF006F3078 /* TransactionsFeature */,
 				FA49F11C28F846E6006F3078 /* Models */,
 				FA49F11E28F8476D006F3078 /* AccountsFeature */,
+				FABB5F1329001BFE00EF27F6 /* Helpers */,
 			);
 			productName = Money;
 			productReference = FA6B9A5B28CD1A02002D13DA /* Money.app */;
@@ -564,6 +569,10 @@
 		FA49F11E28F8476D006F3078 /* AccountsFeature */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = AccountsFeature;
+		};
+		FABB5F1329001BFE00EF27F6 /* Helpers */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Helpers;
 		};
 /* End XCSwiftPackageProductDependency section */
 

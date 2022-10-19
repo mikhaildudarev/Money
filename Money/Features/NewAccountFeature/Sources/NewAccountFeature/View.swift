@@ -6,10 +6,18 @@
 //
 
 import ComposableArchitecture
+import Helpers
 import SwiftUI
 
 public struct View: SwiftUI.View {
+    // MARK: - Types
+    private enum FocusedElement {
+        case accountName
+        case accountBalance
+    }
+    
     // MARK: - Properties
+    @FocusState private var focusedElement: FocusedElement?
     private let store: Store
     
     // MARK: - Init/Deinit
@@ -23,8 +31,10 @@ public struct View: SwiftUI.View {
             NavigationView {
                 VStack {
                     TextField("Name", text: viewStore.accountNameBinding)
+                        .focused($focusedElement, equals: .accountName)
                         .textFieldStyle(.roundedBorder)
                     TextField("Balance", text: viewStore.accountBalanceBinding)
+                        .focused($focusedElement, equals: .accountBalance)
                         .textFieldStyle(.roundedBorder)
                         .keyboardType(.decimalPad)
                     Spacer()
@@ -33,14 +43,20 @@ public struct View: SwiftUI.View {
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
-                        Button("Save", action: { viewStore.send(.saveButtonTapped) })
+                        Button("Save") {
+                            focusedElement = nil
+                            viewStore.send(.saveButtonTapped)
+                        }
                     }
                     ToolbarItem(placement: .navigationBarTrailing) {
-                        Button("Discard", action: { viewStore.send(.closeButtonTapped) })
+                        Button("Discard") {
+                            focusedElement = nil
+                            viewStore.send(.closeButtonTapped)
+                        }
                     }
-
                 }
                 .padding()
+                .dismissingFocusOnTapAround(binding: $focusedElement)
             }
         }
     }
