@@ -33,10 +33,10 @@ public struct View: SwiftUI.View {
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
-                        Button("Save", action: { viewStore.send(.save) })
+                        Button("Save", action: { viewStore.send(.saveButtonTapped) })
                     }
                     ToolbarItem(placement: .navigationBarTrailing) {
-                        Button("Discard", action: { viewStore.send(.close) })
+                        Button("Discard", action: { viewStore.send(.closeButtonTapped) })
                     }
 
                 }

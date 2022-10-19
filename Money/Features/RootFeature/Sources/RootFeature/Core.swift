@@ -23,7 +23,7 @@ public struct State: Equatable {
 }
 
 public enum Action {
-    case selectTab(Tab)
+    case didSelectTab(Tab)
     case accountsAction(AccountsFeature.Action)
     case transactionsAction(TransactionsFeature.Action)
 }
@@ -31,21 +31,26 @@ public enum Action {
 public struct Environment {}
 
 public let reducer = Reducer.combine(
-    AccountsFeature.reducer.pullback(
+    accountsReducer,
+    rootReducer
+)
+
+private let accountsReducer = AccountsFeature.reducer
+    .pullback(
         state: \State.accounts,
         action: /Action.accountsAction,
-        environment: { _ in AccountsFeature.Environment() }
-    ),
-    Reducer { state, action, env in
-        switch action {
-        case .selectTab(let tab):
-            state.selectedTab = tab
-            return Effect.none
-        case .accountsAction(let accountsAction):
-            return Effect.none
-        }
+        environment: { (env: Environment) in AccountsFeature.Environment() }
+    )
+
+private let rootReducer = Reducer { state, action, env in
+    switch action {
+    case .didSelectTab(let tab):
+        state.selectedTab = tab
+        return .none
+    case .accountsAction(let accountsAction):
+        return .none
     }
-)
+}
 
 // MARK: - Convenience
 public extension Store {
@@ -55,7 +60,7 @@ public extension Store {
 
 extension ViewStore {
     var selectedTab: Binding<Tab> {
-        binding(get: \.selectedTab, send: { .selectTab($0) })
+        binding(get: \.selectedTab, send: { .didSelectTab($0) })
     }
 }
 

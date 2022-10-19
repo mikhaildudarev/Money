@@ -17,24 +17,23 @@ public typealias ViewStore = ComposableArchitecture.ViewStore<State, Action>
 // MARK: - TCA
 public struct State: Equatable {
     var accountName: String = ""
-    var accountBalance: Decimal = .zero
+    var accountBalance: String = ""
 
     public var account: Account {
-        Account(name: accountName, balance: accountBalance)
-    }
-
-    var accountBalanceString: String {
-        "\(accountBalance)"
+        Account(
+            name: accountName,
+            balance: Decimal(string: accountBalance) ?? .zero
+        )
     }
     
     public init() {}
 }
 
 public enum Action {
-    case close
-    case save
-    case updateAccountName(String)
-    case updateAccountBalance(String)
+    case closeButtonTapped
+    case saveButtonTapped
+    case accountNameDidChange(String)
+    case accountBalanceDidChange(String)
 }
 
 public struct Environment {
@@ -43,15 +42,15 @@ public struct Environment {
 
 public let reducer = Reducer { state, action, env in
     switch action {
-    case .close:
+    case .closeButtonTapped:
         return .none
-    case .save:
+    case .saveButtonTapped:
         return .none
-    case .updateAccountName(let name):
+    case .accountNameDidChange(let name):
         state.accountName = name
         return .none
-    case .updateAccountBalance(let balance):
-        state.accountBalance = Decimal(string: balance) ?? .zero
+    case .accountBalanceDidChange(let balance):
+        state.accountBalance = balance
         return .none
     }
 }
@@ -64,9 +63,9 @@ public extension Store {
 
 extension ViewStore {
     var accountNameBinding: Binding<String> {
-        binding(get: \.accountName, send: Action.updateAccountName)
+        binding(get: \.accountName, send: Action.accountNameDidChange)
     }
     var accountBalanceBinding: Binding<String> {
-        binding(get: \.accountBalanceString, send: Action.updateAccountBalance)
+        binding(get: \.accountBalance, send: Action.accountBalanceDidChange)
     }
 }

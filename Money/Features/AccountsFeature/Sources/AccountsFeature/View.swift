@@ -25,18 +25,17 @@ public struct View: SwiftUI.View {
                 HStack {
                     Spacer()
                     Button("+") {
-                        viewStore.send(.presentNewAccountForm)
+                        viewStore.send(.addAccountButtonTapped)
                     }
                 }
                 Spacer()
             }
             .sheet(
                 isPresented: viewStore.binding(
-                    get: { $0.newAccount != nil },
-                    send: { $0 ? .presentNewAccountForm : .dismissNewAccountForm }
-
+                    get: \.isNewAccountPresented,
+                    send: { $0 ? .presentNewAccountSheet : .dismissNewAccountSheet }
                 )) {
-                    IfLetStore(store.scope(state: \.newAccount, action: Action.newAccountAction)) {
+                    IfLetStore(store.scope(state: \.newAccount, action: Action.newAccountSheetAction)) {
                         NewAccountFeature.View(store: $0)
                     }
                 }

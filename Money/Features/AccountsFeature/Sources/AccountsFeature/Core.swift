@@ -20,13 +20,18 @@ public struct State: Equatable {
     var accounts: [Account] = []
     var newAccount: NewAccountFeature.State?
     
+    var isNewAccountPresented: Bool {
+        newAccount != nil
+    }
+    
     public init() {}
 }
 
 public enum Action {
-    case presentNewAccountForm
-    case dismissNewAccountForm
-    case newAccountAction(NewAccountFeature.Action)
+    case addAccountButtonTapped
+    case presentNewAccountSheet
+    case dismissNewAccountSheet
+    case newAccountSheetAction(NewAccountFeature.Action)
 }
 
 public struct Environment {
@@ -34,41 +39,46 @@ public struct Environment {
 }
 
 public let reducer = Reducer.combine(
-    NewAccountFeature.reducer
-        .optional()
-        .pullback(
-            state: \.newAccount,
-            action: /Action.newAccountAction,
-            environment: { _ in NewAccountFeature.Environment() }
-        ),
-    Reducer { state, action, env in
-        switch action {
-        case .presentNewAccountForm:
-            state.newAccount = NewAccountFeature.State()
-            return .none
-        case .dismissNewAccountForm:
+    newAccountReducer,
+    accountsReducer
+)
+
+private let newAccountReducer = NewAccountFeature.reducer
+    .optional()
+    .pullback(
+        state: \State.newAccount,
+        action: /Action.newAccountSheetAction,
+        environment: { (env: Environment) in NewAccountFeature.Environment() }
+    )
+
+private let accountsReducer = Reducer { state, action, env in
+    switch action {
+    case .addAccountButtonTapped:
+        return .task {
+            return .presentNewAccountSheet
+        }
+    case .presentNewAccountSheet:
+        state.newAccount = NewAccountFeature.State()
+        return .none
+    case .dismissNewAccountSheet:
+        state.newAccount = nil
+        return .none
+    case .newAccountSheetAction(let newAccountAction):
+        switch newAccountAction {
+        case .closeButtonTapped:
             state.newAccount = nil
             return .none
-        case .newAccountAction(let newAccountAction):
-            switch newAccountAction {
-            case .close:
-                state.newAccount = nil
-                return .none
-            case .save:
-                if let account = state.newAccount?.account {
-                    state.accounts.append(account)
-                }
-                state.newAccount = nil
-                return .none
-            case .updateAccountBalance:
-                return .none
-            case .updateAccountName:
-                return .none
+        case .saveButtonTapped:
+            if let account = state.newAccount?.account {
+                state.accounts.append(account)
             }
-            
+            state.newAccount = nil
+            return .none
+        case .accountBalanceDidChange, .accountNameDidChange:
+            return .none
         }
     }
-)
+}
 
 // MARK: - Convenience
 public extension Store {
