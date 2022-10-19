@@ -116,7 +116,6 @@ iOSInjectionProject/
 
 # Added automatically by Xcode upon package creation (active duplicates from above removed here)
 /Packages
-/*.xcodeproj
 .swiftpm/config/registries.json
 .swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
 .netrc
