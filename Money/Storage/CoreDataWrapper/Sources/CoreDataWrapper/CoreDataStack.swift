@@ -16,7 +16,6 @@ final class CoreDataStack {
     // MARK: - Constants
     private enum Constants {
         static let persistentContainerName = "CoreDataModel"
-        static let inMemoryUrlPath = "/dev/null"
     }
     
     // MARK: - Properties
@@ -45,7 +44,7 @@ final class CoreDataStack {
         let container = NSPersistentContainer(name: Constants.persistentContainerName)
         if storageType == .inMemory {
             let description = NSPersistentStoreDescription()
-            description.url = URL(fileURLWithPath: Constants.inMemoryUrlPath)
+            description.type = NSInMemoryStoreType
             container.persistentStoreDescriptions = [description]
         }
         return container
