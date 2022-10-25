@@ -19,11 +19,10 @@
 		FA6B9A5F28CD1A02002D13DA /* MoneyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B9A5E28CD1A02002D13DA /* MoneyApp.swift */; };
 		FA6B9A6328CD1A03002D13DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA6B9A6228CD1A03002D13DA /* Assets.xcassets */; };
 		FA6B9A6628CD1A03002D13DA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA6B9A6528CD1A03002D13DA /* Preview Assets.xcassets */; };
-		FA727F0A28D0F07400753C57 /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA727F0828D0F07400753C57 /* CoreDataModel.xcdatamodeld */; };
-		FA727F0C28D1076100753C57 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA727F0B28D1076100753C57 /* CoreDataStack.swift */; };
 		FA727F1728D261DA00753C57 /* MoneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA727F1628D261DA00753C57 /* MoneyTests.swift */; };
 		FA727F1E28D261FF00753C57 /* CoreDataStackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA727F1D28D261FF00753C57 /* CoreDataStackTests.swift */; };
 		FABB5F1429001BFE00EF27F6 /* Helpers in Frameworks */ = {isa = PBXBuildFile; productRef = FABB5F1329001BFE00EF27F6 /* Helpers */; };
+		FABB5F1A2901464F00EF27F6 /* Repository in Frameworks */ = {isa = PBXBuildFile; productRef = FABB5F192901464F00EF27F6 /* Repository */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,11 +46,11 @@
 		FA6B9A5E28CD1A02002D13DA /* MoneyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyApp.swift; sourceTree = "<group>"; };
 		FA6B9A6228CD1A03002D13DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA6B9A6528CD1A03002D13DA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		FA727F0928D0F07400753C57 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		FA727F0B28D1076100753C57 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		FA727F1428D261DA00753C57 /* MoneyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoneyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA727F1628D261DA00753C57 /* MoneyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyTests.swift; sourceTree = "<group>"; };
 		FA727F1D28D261FF00753C57 /* CoreDataStackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStackTests.swift; sourceTree = "<group>"; };
+		FABB5F182901463700EF27F6 /* Repository */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Repository; sourceTree = "<group>"; };
+		FABB5F1C2901477700EF27F6 /* CoreDataWrapper */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CoreDataWrapper; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +62,7 @@
 				FA49F11D28F846E6006F3078 /* Models in Frameworks */,
 				FA49F11A28F845BF006F3078 /* TransactionsFeature in Frameworks */,
 				FA49F11628F845BF006F3078 /* NewAccountFeature in Frameworks */,
+				FABB5F1A2901464F00EF27F6 /* Repository in Frameworks */,
 				FA49F11F28F8476D006F3078 /* AccountsFeature in Frameworks */,
 				FA49F11828F845BF006F3078 /* RootFeature in Frameworks */,
 			);
@@ -100,11 +100,11 @@
 		FA6B9A5D28CD1A02002D13DA /* Money */ = {
 			isa = PBXGroup;
 			children = (
-				FA38BFE9290019E400E4CD98 /* Helpers */,
 				FA6B9A5E28CD1A02002D13DA /* MoneyApp.swift */,
 				FA49F11B28F846AC006F3078 /* Models */,
+				FA38BFE9290019E400E4CD98 /* Helpers */,
 				FAECA29F28EDB565001F40F8 /* Features */,
-				FA727F0728D0F03900753C57 /* Persistence */,
+				FABB5F1D290147F900EF27F6 /* Storage */,
 				FA6B9A6228CD1A03002D13DA /* Assets.xcassets */,
 				FA6B9A6428CD1A03002D13DA /* Preview Content */,
 			);
@@ -117,15 +117,6 @@
 				FA6B9A6528CD1A03002D13DA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		FA727F0728D0F03900753C57 /* Persistence */ = {
-			isa = PBXGroup;
-			children = (
-				FA727F0828D0F07400753C57 /* CoreDataModel.xcdatamodeld */,
-				FA727F0B28D1076100753C57 /* CoreDataStack.swift */,
-			);
-			path = Persistence;
 			sourceTree = "<group>";
 		};
 		FA727F1528D261DA00753C57 /* MoneyTests */ = {
@@ -150,6 +141,15 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FABB5F1D290147F900EF27F6 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				FABB5F182901463700EF27F6 /* Repository */,
+				FABB5F1C2901477700EF27F6 /* CoreDataWrapper */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 		FAECA29F28EDB565001F40F8 /* Features */ = {
@@ -186,6 +186,7 @@
 				FA49F11C28F846E6006F3078 /* Models */,
 				FA49F11E28F8476D006F3078 /* AccountsFeature */,
 				FABB5F1329001BFE00EF27F6 /* Helpers */,
+				FABB5F192901464F00EF27F6 /* Repository */,
 			);
 			productName = Money;
 			productReference = FA6B9A5B28CD1A02002D13DA /* Money.app */;
@@ -278,8 +279,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA6B9A5F28CD1A02002D13DA /* MoneyApp.swift in Sources */,
-				FA727F0C28D1076100753C57 /* CoreDataStack.swift in Sources */,
-				FA727F0A28D0F07400753C57 /* CoreDataModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,20 +573,11 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = Helpers;
 		};
-/* End XCSwiftPackageProductDependency section */
-
-/* Begin XCVersionGroup section */
-		FA727F0828D0F07400753C57 /* CoreDataModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				FA727F0928D0F07400753C57 /* Model.xcdatamodel */,
-			);
-			currentVersion = FA727F0928D0F07400753C57 /* Model.xcdatamodel */;
-			path = CoreDataModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
+		FABB5F192901464F00EF27F6 /* Repository */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Repository;
 		};
-/* End XCVersionGroup section */
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FA6B9A5328CD1A02002D13DA /* Project object */;
 }
