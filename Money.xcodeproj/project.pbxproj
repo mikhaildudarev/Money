@@ -86,6 +86,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA43C6802933E612001C7E8B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FA6B9A6428CD1A03002D13DA /* Preview Content */,
+				FA6B9A6228CD1A03002D13DA /* Assets.xcassets */,
+				FA0D9A70293380E30036872F /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		FA6B9A5228CD1A02002D13DA = {
 			isa = PBXGroup;
 			children = (
@@ -108,15 +118,13 @@
 		FA6B9A5D28CD1A02002D13DA /* Money */ = {
 			isa = PBXGroup;
 			children = (
-				FA0D9A70293380E30036872F /* Info.plist */,
 				FA0D9A6D293375770036872F /* Services */,
 				FA6B9A5E28CD1A02002D13DA /* MoneyApp.swift */,
 				FA49F11B28F846AC006F3078 /* Models */,
 				FA38BFE9290019E400E4CD98 /* Helpers */,
 				FAECA29F28EDB565001F40F8 /* Features */,
 				FABB5F1D290147F900EF27F6 /* Storage */,
-				FA6B9A6228CD1A03002D13DA /* Assets.xcassets */,
-				FA6B9A6428CD1A03002D13DA /* Preview Content */,
+				FA43C6802933E612001C7E8B /* Resources */,
 			);
 			path = Money;
 			sourceTree = "<group>";
@@ -440,12 +448,12 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Money/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Money/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = X7GLF7Z6BV;
 				ENABLE_PREVIEWS = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Money/Info.plist;
+				INFOPLIST_FILE = Money/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -475,12 +483,12 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Money/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Money/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = X7GLF7Z6BV;
 				ENABLE_PREVIEWS = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Money/Info.plist;
+				INFOPLIST_FILE = Money/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
