@@ -24,7 +24,11 @@ let package = Package(
             name: "TransactionsFeature",
             dependencies: [
                 .product(name: "ComposableArchitecture", package: "swift-composable-architecture")
-            ]),
+            ],
+            swiftSettings: [
+                .unsafeFlags(["-warnings-as-errors"])
+            ]
+        ),
         .testTarget(
             name: "TransactionsFeatureTests",
             dependencies: ["TransactionsFeature"]),
