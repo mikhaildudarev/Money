@@ -24,7 +24,11 @@ let package = Package(
             name: "RootFeature",
             dependencies: [
                 .product(name: "ComposableArchitecture", package: "swift-composable-architecture")
-            ]),
+            ],
+            swiftSettings: [
+                .unsafeFlags(["-warnings-as-errors"])
+            ]
+        ),
         .testTarget(
             name: "RootFeatureTests",
             dependencies: ["RootFeature"]),

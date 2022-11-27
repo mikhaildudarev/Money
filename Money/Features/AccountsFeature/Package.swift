@@ -28,7 +28,11 @@ let package = Package(
                 .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
                 "Models",
                 "NewAccountFeature"
-            ]),
+            ],
+            swiftSettings: [
+                .unsafeFlags(["-warnings-as-errors"])
+            ]
+        ),
         .testTarget(
             name: "AccountsFeatureTests",
             dependencies: ["AccountsFeature"]),

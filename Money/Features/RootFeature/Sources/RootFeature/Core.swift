@@ -86,6 +86,8 @@ private let rootReducer = Reducer { state, action, env in
         case .signIn, .signUp, .emailDidChange, .passwordDidChange, .failedToAuthenticate:
             return .none
         }
+    case .transactionsAction:
+        return .none
     }
 }
 

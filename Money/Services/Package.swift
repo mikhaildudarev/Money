@@ -24,7 +24,11 @@ let package = Package(
             name: "Services",
             dependencies: [
                 .product(name: "KeychainAccess", package: "KeychainAccess"),
-            ]),
+            ],
+            swiftSettings: [
+                .unsafeFlags(["-warnings-as-errors"])
+            ]
+        ),
         .testTarget(
             name: "ServicesTests",
             dependencies: ["Services"]),

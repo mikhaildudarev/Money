@@ -26,7 +26,11 @@ let package = Package(
             dependencies: [
                 "CoreDataWrapper",
                 "Models"
-            ]),
+            ],
+            swiftSettings: [
+                .unsafeFlags(["-warnings-as-errors"])
+            ]
+        ),
         .testTarget(
             name: "RepositoryTests",
             dependencies: ["Repository"]),

@@ -18,11 +18,18 @@ public struct State: Equatable {
     public init() {}
 }
 
-public enum Action {}
+public enum Action {
+    case addTransaction
+}
 
 public struct Environment {}
 
-public let reducer = Reducer { state, action, env in .none }
+public let reducer = Reducer { state, action, env in
+    switch action {
+    case .addTransaction:
+        return .none
+    }
+}
 
 // MARK: - Convenience
 public extension Store {
