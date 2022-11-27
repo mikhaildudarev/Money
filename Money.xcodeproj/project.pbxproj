@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA0D9A6F293375850036872F /* Services in Frameworks */ = {isa = PBXBuildFile; productRef = FA0D9A6E293375850036872F /* Services */; };
 		FA49F10B28F842BA006F3078 /* RootFeature in Resources */ = {isa = PBXBuildFile; fileRef = FA49F10A28F842BA006F3078 /* RootFeature */; };
 		FA49F10E28F843EC006F3078 /* AccountsFeature in Resources */ = {isa = PBXBuildFile; fileRef = FA49F10D28F843EC006F3078 /* AccountsFeature */; };
 		FA49F11028F844CB006F3078 /* NewAccountFeature in Resources */ = {isa = PBXBuildFile; fileRef = FA49F10F28F844CB006F3078 /* NewAccountFeature */; };
@@ -23,6 +24,8 @@
 		FA727F1E28D261FF00753C57 /* CoreDataStackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA727F1D28D261FF00753C57 /* CoreDataStackTests.swift */; };
 		FABB5F1429001BFE00EF27F6 /* Helpers in Frameworks */ = {isa = PBXBuildFile; productRef = FABB5F1329001BFE00EF27F6 /* Helpers */; };
 		FABB5F1A2901464F00EF27F6 /* Repository in Frameworks */ = {isa = PBXBuildFile; productRef = FABB5F192901464F00EF27F6 /* Repository */; };
+		FAD5F79B293348B700CA7CF4 /* AuthFeature in Resources */ = {isa = PBXBuildFile; fileRef = FAD5F79A293348B700CA7CF4 /* AuthFeature */; };
+		FAD5F79D2933499F00CA7CF4 /* AuthFeature in Frameworks */ = {isa = PBXBuildFile; productRef = FAD5F79C2933499F00CA7CF4 /* AuthFeature */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA0D9A6D293375770036872F /* Services */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Services; sourceTree = "<group>"; };
+		FA0D9A70293380E30036872F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		FA38BFE9290019E400E4CD98 /* Helpers */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Helpers; sourceTree = "<group>"; };
 		FA49F10A28F842BA006F3078 /* RootFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RootFeature; sourceTree = "<group>"; };
 		FA49F10D28F843EC006F3078 /* AccountsFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = AccountsFeature; sourceTree = "<group>"; };
@@ -51,6 +56,7 @@
 		FA727F1D28D261FF00753C57 /* CoreDataStackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStackTests.swift; sourceTree = "<group>"; };
 		FABB5F182901463700EF27F6 /* Repository */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Repository; sourceTree = "<group>"; };
 		FABB5F1C2901477700EF27F6 /* CoreDataWrapper */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CoreDataWrapper; sourceTree = "<group>"; };
+		FAD5F79A293348B700CA7CF4 /* AuthFeature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = AuthFeature; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +65,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FABB5F1429001BFE00EF27F6 /* Helpers in Frameworks */,
+				FAD5F79D2933499F00CA7CF4 /* AuthFeature in Frameworks */,
 				FA49F11D28F846E6006F3078 /* Models in Frameworks */,
+				FA0D9A6F293375850036872F /* Services in Frameworks */,
 				FA49F11A28F845BF006F3078 /* TransactionsFeature in Frameworks */,
 				FA49F11628F845BF006F3078 /* NewAccountFeature in Frameworks */,
 				FABB5F1A2901464F00EF27F6 /* Repository in Frameworks */,
@@ -100,6 +108,8 @@
 		FA6B9A5D28CD1A02002D13DA /* Money */ = {
 			isa = PBXGroup;
 			children = (
+				FA0D9A70293380E30036872F /* Info.plist */,
+				FA0D9A6D293375770036872F /* Services */,
 				FA6B9A5E28CD1A02002D13DA /* MoneyApp.swift */,
 				FA49F11B28F846AC006F3078 /* Models */,
 				FA38BFE9290019E400E4CD98 /* Helpers */,
@@ -155,6 +165,7 @@
 		FAECA29F28EDB565001F40F8 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				FAD5F79A293348B700CA7CF4 /* AuthFeature */,
 				FA49F10A28F842BA006F3078 /* RootFeature */,
 				FA49F10D28F843EC006F3078 /* AccountsFeature */,
 				FA49F10F28F844CB006F3078 /* NewAccountFeature */,
@@ -187,6 +198,8 @@
 				FA49F11E28F8476D006F3078 /* AccountsFeature */,
 				FABB5F1329001BFE00EF27F6 /* Helpers */,
 				FABB5F192901464F00EF27F6 /* Repository */,
+				FAD5F79C2933499F00CA7CF4 /* AuthFeature */,
+				FA0D9A6E293375850036872F /* Services */,
 			);
 			productName = Money;
 			productReference = FA6B9A5B28CD1A02002D13DA /* Money.app */;
@@ -255,6 +268,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAD5F79B293348B700CA7CF4 /* AuthFeature in Resources */,
 				FA6B9A6628CD1A03002D13DA /* Preview Assets.xcassets in Resources */,
 				FA49F11028F844CB006F3078 /* NewAccountFeature in Resources */,
 				FA6B9A6328CD1A03002D13DA /* Assets.xcassets in Resources */,
@@ -306,6 +320,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -366,6 +381,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -428,6 +444,7 @@
 				DEVELOPMENT_TEAM = X7GLF7Z6BV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Money/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -460,6 +477,7 @@
 				DEVELOPMENT_TEAM = X7GLF7Z6BV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Money/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -549,6 +567,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		FA0D9A6E293375850036872F /* Services */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Services;
+		};
 		FA49F11528F845BF006F3078 /* NewAccountFeature */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = NewAccountFeature;
@@ -576,6 +598,10 @@
 		FABB5F192901464F00EF27F6 /* Repository */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Repository;
+		};
+		FAD5F79C2933499F00CA7CF4 /* AuthFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AuthFeature;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
