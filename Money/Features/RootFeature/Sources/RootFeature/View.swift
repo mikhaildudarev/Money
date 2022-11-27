@@ -6,6 +6,7 @@
 //
 
 import AccountsFeature
+import AuthFeature
 import ComposableArchitecture
 import SwiftUI
 import TransactionsFeature
@@ -23,15 +24,25 @@ public struct View: SwiftUI.View {
     public var body: some SwiftUI.View {
         WithViewStore(store) { viewStore in
             NavigationView {
-                TabView(selection: viewStore.selectedTab) {
-                    AccountsFeature.View(store: AccountsFeature.Store.live)
-                        .tabItem { Text("Accounts") }
-                        .tag(Tab.accounts)
-                    TransactionsFeature.View(store: store.scope(state: \.transactions, action: Action.transactionsAction))
-                        .tabItem { Text("Transactions") }
-                        .tag(Tab.transactions)
+                ZStack {
+                    if viewStore.isAuthenticated {
+                        TabView(selection: viewStore.selectedTab) {
+                            AccountsFeature.View(store: AccountsFeature.Store.live)
+                                .tabItem { Text("Accounts") }
+                                .tag(Tab.accounts)
+                            TransactionsFeature.View(store: store.scope(state: \.transactions, action: Action.transactionsAction))
+                                .tabItem { Text("Transactions") }
+                                .tag(Tab.transactions)
+                        }
+                        .padding()
+                    } else {
+                        AuthFeature.View(store: self.store.scope(state: \.auth, action: Action.authAction))
+                    }
                 }
-                .padding()
+                .animation(.easeInOut, value: viewStore.isAuthenticated)
+                .onAppear {
+                    viewStore.send(.checkAuthentication)
+                }
             }
         }
     }

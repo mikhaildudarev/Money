@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  AuthFeature
+
+  Created by Mikhail Dudarev on 27.11.2022.
+  
+*/
+
+"email" = "Электронная почта";
+"password" = "Пароль";
+"signIn" = "Войти";
+"signUp" = "Регистрация";
